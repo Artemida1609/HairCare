@@ -48,9 +48,9 @@ export const Home = () => {
   };
 
   return (
-    <main className="flex flex-col min-h-screen w-full bg-[#f5f5f5]">
+    <main className="flex flex-col min-h-screen w-full bg-[#f5f5f5] overflow-hidden">
       <span
-        className={`fixed bottom-4 right-4 z-50 transition-all duration-300
+        className={`fixed bottom-0.5 right-0.5 sm:bottom-4 sm:right-4 z-50 transition-all duration-300
           ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
       >
         <button

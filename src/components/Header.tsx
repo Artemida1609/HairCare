@@ -1,26 +1,18 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-scroll";
 import { useSideBar } from "../contexts/SideBarContext";
+import { useScreenSize } from "../hooks/useScreenSize";
 
 export const Header = () => {
   const [active, setActive] = useState(0);
-  const [screenSize, setScreenSize] = useState<number | null>(null);
   const { showSideBar, setShowSideBar } = useSideBar()
+  const { screenSize } = useScreenSize();
 
   const navItems = ["Home", "Services", "Gallery", "About", "Blog", "Contact"];
 
   const handleNavClick = (index: number) => {
     setActive(index);
   };
-
-  useEffect(() => {
-    const handleResize = () => setScreenSize(window.innerWidth);
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, [screenSize]);
 
   return (
     <header className="w-full flex justify-center pt-2">
@@ -44,7 +36,7 @@ export const Header = () => {
           </h2>
         </div>
 
-        {screenSize && screenSize < 768 && !showSideBar ? (
+        {(screenSize === "xs" || screenSize === "sm") && !showSideBar ? (
           <div
             className="cursor-pointer w-full flex items-center justify-end h-12 pr-1 text-white"
             onClick={() => setShowSideBar(true)}
@@ -60,7 +52,7 @@ export const Header = () => {
           </div>
         ) : null}
 
-        {screenSize && screenSize < 768 && showSideBar ? (
+        {(screenSize === "xs" || screenSize === "sm") && showSideBar ? (
           <div
             className="cursor-pointer w-full flex items-center justify-end h-12 pr-4 text-white"
             onClick={() => {

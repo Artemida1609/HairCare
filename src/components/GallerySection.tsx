@@ -1,9 +1,11 @@
 import { useState } from "react";
 import galleryData from "../data/gallery.json";
 import { motion, AnimatePresence } from "framer-motion";
+import { useScreenSize } from "../hooks/useScreenSize";
 
 export const GallerySection = () => {
   const [active, setActive] = useState<number | null>(null);
+  const { screenSize } = useScreenSize();
 
   return (
     <section
@@ -20,12 +22,18 @@ export const GallerySection = () => {
         Separated they live in. A small river named Duden flows by their place
         and supplies it with the necessary regelialia.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="flex flex-col justify-center items-center sm:grid sm:grid-cols-3 gap-6 w-full max-w-6xl mx-auto px-4">
         {galleryData.map((item, index) => (
           <motion.div
             key={item.id}
             layoutId={`gallery-card-${item.id}`}
-            className="relative w-full h-64 sm:w-72 sm:h-72 overflow-hidden group"
+            className="relative w-full aspect-square overflow-hidden group rounded-lg shadow-md"
+            onClick={(e) => {
+              if (screenSize === "xs" || screenSize === "sm") {
+                e.stopPropagation();
+                setActive(item.id);
+              }
+            }}
           >
             <motion.img
               layoutId={`gallery-img-${item.id}`}
@@ -33,7 +41,6 @@ export const GallerySection = () => {
               alt={`Gallery item ${index + 1}`}
               className="w-full h-full object-cover group-hover:scale-130 transition-transform duration-500 cursor-pointer"
             />
-
             <div className="absolute inset-0 bg-[#BF925B]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="flex justify-end items-start h-full w-full">
                 <p className="absolute bottom-4 left-4 text-white font-bold">
@@ -79,7 +86,7 @@ export const GallerySection = () => {
         {active && (
           <motion.div
             className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
-            layoutId={`gallery-card-${active}`}  
+            layoutId={`gallery-card-${active}`}
             onClick={() => setActive(null)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
