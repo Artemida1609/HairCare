@@ -27,7 +27,7 @@ export const Footer = () => {
             active:scale-95 active:shadow-sm
             "
             >
-              <img src={icon.img} alt={icon.alt} className="w-8 h-8 block" />
+              <img src={`${import.meta.env.BASE_URL}${icon.img}`} alt={icon.alt} className="w-8 h-8 block" />
             </button>
           ))}
         </div>
@@ -78,7 +78,7 @@ export const Footer = () => {
               group-hover:scale-110 transition-all duration-300 
               group-active:scale-95 group-active:shadow-sm"
               >
-                <img src={icon.img} alt={icon.alt} className="w-6 h-6" />
+                <img src={`${import.meta.env.BASE_URL}${icon.img}`} alt={icon.alt} className="w-6 h-6" />
               </div>
               <p className="text-[#808080] font-bold text-sm tracking-[0.2em] group-hover:text-[#BF925B]">
                 {icon.descr}

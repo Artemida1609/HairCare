@@ -1,8 +1,8 @@
 [
-  {"id": 1, "img": "/images/gallery-pic1.jpg", "title": "Hair Cut", "subtitle": "Beaty"},
-  {"id": 2, "img": "/images/gallery-pic2.jpg", "title": "Hair Style", "subtitle": "Stylist"},
-  {"id": 3, "img": "/images/gallery-pic3.jpg", "title": "Beard Trim", "subtitle": "Beaty"},
-  {"id": 4, "img": "/images/gallery-pic1.jpg", "title": "Hair Cut", "subtitle": "Beaty"},
-  {"id": 5, "img": "/images/gallery-pic2.jpg", "title": "Hair Style", "subtitle": "Stylist"},
-  {"id": 6, "img": "/images/gallery-pic3.jpg", "title": "Beard Trim", "subtitle": "Beaty"}
+  {"id": 1, "img": "images/gallery-pic1.jpg", "title": "Hair Cut", "subtitle": "Beaty"},
+  {"id": 2, "img": "images/gallery-pic2.jpg", "title": "Hair Style", "subtitle": "Stylist"},
+  {"id": 3, "img": "images/gallery-pic3.jpg", "title": "Beard Trim", "subtitle": "Beaty"},
+  {"id": 4, "img": "images/gallery-pic1.jpg", "title": "Hair Cut", "subtitle": "Beaty"},
+  {"id": 5, "img": "images/gallery-pic2.jpg", "title": "Hair Style", "subtitle": "Stylist"},
+  {"id": 6, "img": "images/gallery-pic3.jpg", "title": "Beard Trim", "subtitle": "Beaty"}
 ]

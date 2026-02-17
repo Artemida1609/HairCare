@@ -29,7 +29,7 @@ export const GallerySection = () => {
           >
             <motion.img
               layoutId={`gallery-img-${item.id}`}
-              src={item.img}
+              src={`${import.meta.env.BASE_URL}${item.img}`}
               alt={`Gallery item ${index + 1}`}
               className="w-full h-full object-cover group-hover:scale-130 transition-transform duration-500 cursor-pointer"
             />

@@ -56,7 +56,7 @@ export const ArtistsSection = () => {
           >
             <div className="relative">
               <img
-                src={person.img}
+                src={`${import.meta.env.BASE_URL}${person.img}`}
                 alt={person.name}
                 className="w-96 h-96 object-cover backdrop-blur-xs backdrop-grayscale transition-opacity duration-300"
               />
