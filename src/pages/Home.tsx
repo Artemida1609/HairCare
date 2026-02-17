@@ -8,10 +8,7 @@ import { WelcomeSection } from "../components/WelcomeSection";
 import header_bg from "/images/header-bg.jpg";
 import { Footer } from "../components/Footer";
 import { Loader } from "../features/Loader";
-import { Link } from "react-scroll";
 import { SideBar } from "../components/SideBar";
-import { Outlet } from "react-router-dom";
-import { SideBarProvider, useSideBar } from "../contexts/SideBarContext";
 
 const ArtistsSection = lazy(() =>
   import("../components/ArtistsSection").then((module) => ({
@@ -31,7 +28,6 @@ const HappyCustomerSection = lazy(() =>
 
 export const Home = () => {
   const [show, setShow] = useState(false);
-  const { showSideBar } = useSideBar();
 
   useEffect(() => {
     const handleScroll = () => {
