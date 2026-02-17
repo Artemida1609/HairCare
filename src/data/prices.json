@@ -1,0 +1,34 @@
+[
+  {
+    "title": "hair style",
+    "price": 50.0,
+    "descr": [
+      "hair dryer",
+      "hair coloring",
+      "hair cut",
+      "hair dresser",
+      "hair spa"
+    ]
+  },
+  {
+    "title": "manicure pedicure",
+    "price": 34.5,
+    "descr": ["manicure", "pedicure", "coloring", "nails", "nail cut"]
+  },
+  {
+    "title": "makeup",
+    "price": 54.5,
+    "descr": [
+      "makeup",
+      "professional makeup",
+      "blush on",
+      "facial massage",
+      "facial spa"
+    ]
+  },
+  {
+    "title": "body treatment",
+    "price": 89.5,
+    "descr": ["massage", "spa", "foot spa", "body spa", "relaxing"]
+  }
+]

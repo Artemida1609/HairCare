@@ -1,0 +1,8 @@
+[
+  {"img": "/icons/facebook.png", "alt": "Facebook"},
+  {"img": "/icons/twitter.png", "alt": "Twitter"},
+  {"img": "/icons/instagram.png", "alt": "Instagram"},
+  {"img": "/icons/location.png", "alt": "Location", "descr": "203 Fake St. Mountain View, San Francisco, California, USA"},
+  {"img": "/icons/telephone.png", "alt": "Telephone", "descr": "+2 392 3929 210"},
+  {"img": "/icons/mail.png", "alt": "Email", "descr": "info@yourdomain.com"}
+]

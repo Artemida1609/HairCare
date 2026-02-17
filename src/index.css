@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+
+@layer components {
+  .underline-animation {
+    position: relative;
+    padding-bottom: 4px;
+    display: inline-block;
+    width: fit-content;
+  }
+
+  .underline-animation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #BF925B;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+
+  .underline-active::after {
+    transform: scaleX(1);
+  }
+
+}
