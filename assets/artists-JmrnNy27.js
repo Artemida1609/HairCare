@@ -1,0 +1,1 @@
+const i=[{id:"1",img:"images/man-portrait1.jpg",name:"Nicole Simon",position:"Nail Master"},{id:"2",img:"images/woman-portrait1.jpg",name:"Cloe Meyer",position:"Director"},{id:"3",img:"images/man-portrait2.jpg",name:"Rachel Clinton",position:"Hair Stylist"},{id:"4",img:"images/woman-portrait2.jpg",name:"Dave Buff",position:"Barber"}];export{i as a};
