@@ -9,7 +9,7 @@ export const GallerySection = () => {
 
   return (
     <section
-      className="flex flex-col justify-start items-center bg-[#f5f2ea] pb-12"
+      className="flex flex-col justify-start items-center bg-[#f5f2ea] p-12"
       id="gallery"
     >
       <p className="text-[#BF925B] text-xs font-bold uppercase tracking-[0.2em] mb-1">

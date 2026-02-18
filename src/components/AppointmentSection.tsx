@@ -1,10 +1,11 @@
 import CustomDropdown from "../features/CustomDropdown";
 import { Button } from "./Button";
 import services from '../data/services.json';
+import { BookForm } from "./BookForm";
 
 export const AppointmentSection = () => {
   return (
-    <section className="flex flex-col bg-[#EBE8DE] justify-start items-center p-4 sm:p-24">
+    <section className="flex flex-col bg-[#EBE8DE] justify-start items-center p-4 sm:p-16" id="book-form">
       <p className="text-[#BF925B] font-bold tracking-[0.1em] uppercase text-sm mb-2">
         Booking
       </p>
@@ -15,7 +16,7 @@ export const AppointmentSection = () => {
         Far far away, behind the word mountains, far from the countries Vokalia
         and Consonantia
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-8">
+      {/* <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-8">
         <input
           type="text"
           placeholder="Name"
@@ -46,8 +47,9 @@ export const AppointmentSection = () => {
           placeholder="Message"
           className="h-36 p-4 outline-[#BF925B] outline-solid rounded-sm focus:outline-[#BF925B] focus:outline-solid sm:col-span-2"
         />
-      </div>
-      <Button text="Make an appointment" />
+      </form>
+      <Button text="Make an appointment" /> */}
+      <BookForm />
     </section>
   );
 };

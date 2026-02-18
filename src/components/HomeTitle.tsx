@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { Button } from "./Button";
 
 export const HomeTitle = () => {
@@ -12,7 +13,9 @@ export const HomeTitle = () => {
       {/* <button className="mt-4 border-2 border-[#BF925B] px-10 py-4 text-sm uppercase tracking-widest hover:bg-[#BF925B] transition-all duration-300">
         Book now
       </button> */}
-      <Button text="Book now" />
+      <Link to="book-form" smooth={true} duration={500}>
+        <Button text="Book now" />
+      </Link>
     </div>
   );
 };

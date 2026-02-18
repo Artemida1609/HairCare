@@ -16,7 +16,7 @@ export const ServicesSection = () => {
   };
 
   return (
-    <section className="flex flex-col justify-center items-center p-4 sm:p-24 bg-[#f5f2ea]" id="services">
+    <section className="flex flex-col justify-center items-center p-4 sm:p-16 bg-[#f5f2ea]" id="services">
       <p className="text-[#BF925B] font-bold text-sm tracking-[0.2em] uppercase mb-2">Services</p>
       <h1 className="text-[#0a0909] font-bold text-3xl sm:text-5xl mb-4 uppercase tracking-[0.01em] text-center">Services Menu</h1>
       <p className="text-[#808080] text-m mb-8 text-center w-full">

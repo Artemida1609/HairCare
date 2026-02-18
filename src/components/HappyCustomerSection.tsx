@@ -23,10 +23,10 @@ export const HappyCustomerSection = () => {
 
   return (
     <section
-      className="relative flex flex-row justify-start items-center bg-[#ebe8de] p-8 sm:p-24 gap-12 sm:h-128 box-border"
+      className="relative flex flex-row justify-start items-center bg-[#ebe8de] p-8 sm:p-12 gap-12 sm:h-128 box-border"
       id="blog"
     >
-      {screenSize === "sm" && (
+      {screenSize !== "sm" && screenSize !== "xs" && (
         <img
           src={photo}
           alt="Happy Customer"
