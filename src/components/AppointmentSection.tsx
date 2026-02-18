@@ -1,6 +1,6 @@
-import CustomDropdown from "../features/CustomDropdown";
-import { Button } from "./Button";
-import services from '../data/services.json';
+// import CustomDropdown from "../features/CustomDropdown";
+// import { Button } from "./Button";
+// import services from '../data/services.json';
 import { BookForm } from "./BookForm";
 
 export const AppointmentSection = () => {

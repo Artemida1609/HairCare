@@ -19,7 +19,7 @@ export const BookForm = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
-        (result) => {
+        () => {
           alert("Лист відправлено успішно!");
         },
         (error) => {
