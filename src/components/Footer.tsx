@@ -6,7 +6,7 @@ export const Footer = () => {
   const linksData = ["Home", "About", "Services", "Work", "Blog", "Contact"];
 
   return (
-    <footer className="relative flex flex-col sm:flex-row justify-center items-stretch bg-[#333333] p-2 sm:p-24" id="contact">
+    <footer className="relative flex flex-col sm:flex-row justify-center items-stretch bg-[#333333] p-8 sm:p-24" id="contact">
       <div className="flex flex-col w-full sm:w-1/4 justify-center items-center sm:justify-start sm:items-start mb-8 sm:mb-0">
         <h2 className="text-white font-bold text-2xl uppercase tracking-[0.01em] mb-4 sm:mb-12">
           Haircare
@@ -70,7 +70,7 @@ export const Footer = () => {
           {footerIcons.slice(3).map((icon, index) => (
             <li
               key={index}
-              className="flex items-center cursor-pointer group"
+              className="flex items-center cursor-pointer group gap-2"
             >
               <div
                 className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-[#d1c8b4] 
@@ -80,7 +80,7 @@ export const Footer = () => {
               >
                 <img src={`${import.meta.env.BASE_URL}${icon.img}`} alt={icon.alt} className="w-6 h-6" />
               </div>
-              <p className="text-[#808080] font-bold text-sm tracking-[0.2em] group-hover:text-[#BF925B] flex-1 break-words">
+              <p className="text-[#808080] font-bold text-sm tracking-[0.2em] group-hover:text-[#BF925B] flex-1 break-all">
                 {icon.descr}
               </p>
             </li>

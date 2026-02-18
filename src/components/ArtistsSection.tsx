@@ -8,10 +8,7 @@ export const ArtistsSection = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
-        // type: "spring",
-        // stiffness: 120,
-        // damping: 18,
+        staggerChildren: 0.3
       },
     },
   };
@@ -51,8 +48,12 @@ export const ArtistsSection = () => {
         {artists.map((person, index) => (
           <motion.div
             key={index}
-            className="relative flex flex-col hover:transform hover:-translate-y-4 hover:shadow-lg transition-all duration-300 cursor-pointer group"
+            className="relative flex flex-col transition-all duration-50 cursor-pointer group"
             variants={itemVariants}
+            whileHover={{ 
+              y: -16,
+              boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+            }}
           >
             <div className="relative">
               <img
