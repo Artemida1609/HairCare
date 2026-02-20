@@ -1,34 +1,42 @@
 [
   {
-    "title": "hair style",
-    "price": 50.0,
-    "descr": [
-      "hair dryer",
-      "hair coloring",
-      "hair cut",
-      "hair dresser",
-      "hair spa"
+    "category": "hair style",
+    "services": [
+      { "name": "hair dryer", "price": 25.0, "duration": 30 },
+      { "name": "hair coloring", "price": 120.0, "duration": 150 },
+      { "name": "hair cut", "price": 45.0, "duration": 60 },
+      { "name": "hair dresser", "price": 55.0, "duration": 45 },
+      { "name": "hair spa", "price": 70.0, "duration": 90 }
     ]
   },
   {
-    "title": "manicure pedicure",
-    "price": 34.5,
-    "descr": ["manicure", "pedicure", "coloring", "nails", "nail cut"]
-  },
-  {
-    "title": "makeup",
-    "price": 54.5,
-    "descr": [
-      "makeup",
-      "professional makeup",
-      "blush on",
-      "facial massage",
-      "facial spa"
+    "category": "manicure pedicure",
+    "services": [
+      { "name": "manicure", "price": 30.0, "duration": 45 },
+      { "name": "pedicure", "price": 45.0, "duration": 60 },
+      { "name": "coloring", "price": 15.0, "duration": 20 },
+      { "name": "nails", "price": 40.0, "duration": 90 },
+      { "name": "nail cut", "price": 10.0, "duration": 15 }
     ]
   },
   {
-    "title": "body treatment",
-    "price": 89.5,
-    "descr": ["massage", "spa", "foot spa", "body spa", "relaxing"]
+    "category": "makeup",
+    "services": [
+      { "name": "makeup", "price": 50.0, "duration": 45 },
+      { "name": "professional makeup", "price": 100.0, "duration": 90 },
+      { "name": "blush on", "price": 20.0, "duration": 15 },
+      { "name": "facial massage", "price": 40.0, "duration": 30 },
+      { "name": "facial spa", "price": 65.0, "duration": 60 }
+    ]
+  },
+  {
+    "category": "body treatment",
+    "services": [
+      { "name": "massage", "price": 80.0, "duration": 60 },
+      { "name": "spa", "price": 110.0, "duration": 90 },
+      { "name": "foot spa", "price": 50.0, "duration": 45 },
+      { "name": "body spa", "price": 150.0, "duration": 120 },
+      { "name": "relaxing", "price": 90.0, "duration": 75 }
+    ]
   }
 ]

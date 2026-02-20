@@ -1,11 +1,23 @@
 // import CustomDropdown from "../features/CustomDropdown";
 // import { Button } from "./Button";
 // import services from '../data/services.json';
+import { useState } from "react";
 import { BookForm } from "./BookForm";
+import { ServicesModal } from "./ServicesModal";
+import { BarberNamesModal } from "./BarberNamesModal";
 
 export const AppointmentSection = () => {
+  const [activeServicesModal, setActiveServicesModal] = useState(false);
+  const [activeBarbersModal, setActiveBarbersModal] = useState(false);
+  const [activeServiceName, setActiveServiceName] = useState<string>("Service name");
+  const [activeBarberName, setActiveBarberName] = useState<string>("Barber name");
+
+
   return (
     <section className="flex flex-col bg-[#EBE8DE] justify-start items-center p-4 sm:p-16" id="book-form">
+      <ServicesModal activeModal={activeServicesModal} setActiveModal={setActiveServicesModal} setActiveServiceName={setActiveServiceName}/>
+      <BarberNamesModal activeModal={activeBarbersModal} setActiveModal={setActiveBarbersModal} setActiveBarberName={setActiveBarberName}/>
+
       <p className="text-[#BF925B] font-bold tracking-[0.1em] uppercase text-sm mb-2">
         Booking
       </p>
@@ -49,7 +61,7 @@ export const AppointmentSection = () => {
         />
       </form>
       <Button text="Make an appointment" /> */}
-      <BookForm />
+      <BookForm setActiveServiceModal={setActiveServicesModal} setActiveBarbersModal={setActiveBarbersModal} activeServiceName={activeServiceName} activeBarberName={activeBarberName} />
     </section>
   );
 };

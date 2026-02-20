@@ -48,7 +48,7 @@ export const Home = () => {
   };
 
   return (
-    <main className="flex flex-col min-h-screen w-full bg-[#f5f5f5] overflow-hidden">
+    <main className="flex flex-col min-h-screen w-full bg-[#f5f5f5] no-scrollbar">
       <span
         className={`fixed bottom-0 right-0 sm:bottom-4 sm:right-4 z-50 transition-all duration-300
           ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}

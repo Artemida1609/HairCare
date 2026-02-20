@@ -21,16 +21,16 @@ export const PricesSection = () => {
             border-[2px] rounded-[4px] p-8 transition-all duration-300 group hover:border-[#563b4c] hover:translate-y-[-7px] hover:shadow-purple-900"
           >
             <h2 className="text-l font-bold text-[#BF925B] uppercase tracking-[0.01em] mb-2 group-hover:text-[#563b4c] transition-colors">
-              {service.title}
+              {service.category}
             </h2>
-            <p className="text-xl font-bold text-[#0a0909] uppercase tracking-[0.01em] mb-2">{`$${service.price}/session`}</p>
+            {/* <p className="text-xl font-bold text-[#0a0909] uppercase tracking-[0.01em] mb-2">{`$${service.price}/session`}</p> */}
             <ul>
-              {service.descr.map((item, idx) => (
+              {service.services.map((item, idx) => (
                 <li
                   key={idx}
                   className="text-[#808080] text-bold text-m uppercase tracking-[0.01em] text-center mb-1"
                 >
-                  {item}
+                  {item.name}
                 </li>
               ))}
             </ul>
