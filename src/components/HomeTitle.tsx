@@ -14,7 +14,7 @@ export const HomeTitle = () => {
         Book now
       </button> */}
       <Link to="book-form" smooth={true} duration={500}>
-        <Button text="Book now" />
+        <Button text="Book now" type="button" styles=""/>
       </Link>
     </div>
   );

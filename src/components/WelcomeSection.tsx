@@ -82,7 +82,7 @@ export const WelcomeSection = () => {
           the word mountains, far from the countries Vokalia and Consonantia,
           there live the blind texts.
         </p>
-        <Button text="Read more" />
+        <Button text="Read more" type="button" styles="" />
       </motion.div>
       <motion.div
         className="relative w-full sm:w-1/4 h-[300px] sm:h-130 flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat"

@@ -31,7 +31,7 @@ export const BarberNamesModal = ({activeModal, setActiveModal, setActiveBarberNa
       }, 500);
     };
 
-  if (!activeModal) return null;
+  if (!activeModal && !shouldRender) return null;
   return (
     <section id="modal-outer" className={`fixed inset-0 bg-white z-[1000] flex flex-col gap-2 transition-opacity 
     duration-300 items-center justify-center self-center justify-self-center rounded overflow-y-auto 
