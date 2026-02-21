@@ -1,7 +1,7 @@
 import artists from "../data/artists.json";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { usePreloadImages } from "../hooks/usePreloadImages";
+// import { usePreloadImages } from "../hooks/usePreloadImages";
 
 export const ArtistsSection = () => {
   const itemVariants: Variants = {
