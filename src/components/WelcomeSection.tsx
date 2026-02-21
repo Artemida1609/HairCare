@@ -107,14 +107,6 @@ export const WelcomeSection = () => {
           </svg>
         </p>
       </motion.div>
-      {/* <div className="block sm:hidden fixed top-0 left-0 bg-red-500 text-white p-2 z-50">
-        640px
-</div>
-
-<div className="hidden sm:block fixed top-0 left-0 bg-green-500 text-white p-2 z-50">
-  ≥ 640px
-</div> */}
-
     </section>
   );
 };

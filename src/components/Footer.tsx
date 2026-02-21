@@ -1,4 +1,5 @@
 // import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import footerIcons from "../data/footer-icons.json";
 
 export const Footer = () => {
@@ -53,12 +54,14 @@ export const Footer = () => {
         </h2>
         <ul>
           {linksData.map((item, index) => (
+            <Link key={index} to={item==="Work" ? "gallery" : item.toLowerCase()} smooth={true} duration={500}>
             <li
               key={index}
               className="text-[#808080] font-bold text-sm tracking-[0.2em] mb-4 cursor-pointer hover:text-[#BF925B]"
             >
               {item}
             </li>
+            </Link>
           ))}
         </ul>
       </div>
@@ -73,7 +76,7 @@ export const Footer = () => {
               className="flex items-center cursor-pointer group gap-2"
             >
               <div
-                className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-[#d1c8b4] 
+                className="w-12 h-12 rounded-full bg-[#d1c8b4] 
               flex items-center justify-center shrink-0
               group-hover:scale-110 transition-all duration-300 
               group-active:scale-95 group-active:shadow-sm"

@@ -15,7 +15,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="w-full flex justify-center pt-2">
+    <header className="w-full flex justify-center pt-2" id="home">
       <div
         className="w-full max-w-7xl sm:px-8 sm:py-6 
         flex flex-row items-center justify-between"

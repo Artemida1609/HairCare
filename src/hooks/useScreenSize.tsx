@@ -9,6 +9,7 @@ export const useScreenSize = () => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
         setScreenSize("xs");
+        console.log(`Screen size: ${window.innerWidth}px (xs)`);
       } else if (window.innerWidth >= 640 && window.innerWidth < 768) {
         setScreenSize("sm");
       } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {

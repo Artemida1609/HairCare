@@ -1,28 +1,15 @@
 import artists from "../data/artists.json";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { usePreloadImages } from "../hooks/usePreloadImages";
 
 export const ArtistsSection = () => {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3
-      },
-    },
-  };
-
   const itemVariants: Variants = {
     hidden: { x: 50, opacity: 0 },
     visible: {
       x: 0,
       opacity: 1,
-      transition: {
-        type: "spring" as const,
-        stiffness: 120,
-        damping: 18,
-      },
+      transition: { type: "tween" as const, duration: 0.8 },
     },
   };
 
@@ -38,43 +25,39 @@ export const ArtistsSection = () => {
         Far far away, behind the word mountains, far from the countries Vokalia
         and Consonantia
       </p>
-      <motion.div
-        className="flex flex-col sm:flex-row justify-start items-center w-full p-12 gap-8"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.2, once: true }}
-      >
+      <div className="flex flex-col sm:flex-row justify-start items-center w-full p-12 gap-8">
         {artists.map((person, index) => (
           <motion.div
             key={index}
-            className="relative flex flex-col transition-all duration-50 cursor-pointer group"
+            className="relative flex flex-col cursor-pointer group w-full sm:w-auto"
             variants={itemVariants}
-            whileHover={{ 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.3, once: true }}
+            whileHover={{
               y: -16,
-              boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+              boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
             }}
           >
             <div className="relative">
               <img
                 src={`${import.meta.env.BASE_URL}${person.img}`}
                 alt={person.name}
-                className="w-96 h-96 object-cover backdrop-blur-xs backdrop-grayscale transition-opacity duration-300"
+                className="w-full sm:w-96 h-64 sm:h-96 object-cover transition-opacity duration-300"
               />
-              <div className="absolute inset-0 bg-[#BF925B]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-[#BF925B]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-
-            <div className="relative bg-[#333333] h-24 flex flex-col justify-center items-center transition-transform duration-300">
+            <div className="relative bg-[#333333] h-24 flex flex-col justify-center items-center">
               <h2 className="text-xl font-bold uppercase text-white tracking-[0.0001em] text-center">
                 {person.name}
               </h2>
-              <p className="text-sm font-bold uppercase text-[#BF925B] tracking-[0.002em]">
+              <p className="text-sm font-bold uppercase text-[#BF925B]">
                 {person.position}
               </p>
             </div>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };
